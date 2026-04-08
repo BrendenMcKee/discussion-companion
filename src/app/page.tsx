@@ -3,21 +3,21 @@ import { ApiStatus } from "@/components/ApiStatus";
 export default function HomePage() {
   return (
     <main>
-      <span className="badge">v0 · sample Reddit data</span>
+      <span className="badge">v0 · bundled static feed</span>
       <h1>Discussion Companion</h1>
       <p className="muted">
-        Surface discussion ideas from communities you follow and get structured
-        feedback while you draft posts or comments.
+        Surface discussion ideas from <strong>user-selected subreddits</strong> and
+        get structured feedback while you draft posts or comments.
       </p>
 
       <h2>This release</h2>
       <p>
         Discussion Companion v0 runs as a Next.js web app with a bundled JSON
-        feed that looks like Reddit posts, ranking and draft feedback on the
-        server, and a small UI.{" "}
+        feed shaped like Reddit posts, ranking and draft feedback on the server,
+        and a small UI.{" "}
         <strong>Live Reddit sync is not in this build.</strong> The next milestone
         is a <code>RedditContentProvider</code> implementation that uses your
-        chosen sign-in and reads from Reddit for real users.
+        chosen sign-in and reads from Reddit for signed-in users.
       </p>
 
       <h2>Server API from the browser</h2>
@@ -37,18 +37,19 @@ export default function HomePage() {
 
       <h2>HTTP API (v0)</h2>
       <p className="muted">
-        Sample-backed routes ship today; response bodies label{" "}
-        <code>source: sample</code> when data comes from the repo JSON.
+        These are the first production-style routes. Responses include{" "}
+        <code>source: &quot;bundle&quot;</code> when built from the on-disk seed
+        feed; that field will distinguish live sync later.
       </p>
       <ul>
         <li>
           <code>GET /api/health</code>: service metadata
         </li>
         <li>
-          <code>GET /api/opportunities/sample</code>: ranked opportunities
+          <code>GET /api/opportunities</code>: ranked opportunities
         </li>
         <li>
-          <code>POST /api/feedback/sample</code>: JSON body{" "}
+          <code>POST /api/feedback</code>: JSON body{" "}
           <code>{`{ "draft": "..." }`}</code>
         </li>
       </ul>

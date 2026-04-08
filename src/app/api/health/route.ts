@@ -7,8 +7,8 @@ export async function GET() {
     ok: true,
     service: "discussion-companion",
     environment: env.nodeEnv,
-    dataSource: "bundled_sample",
+    dataSource: "bundled_feed",
     note:
-      "v0 build using bundled sample Reddit-shaped data. Live account sync is on the roadmap.",
+      "v0 uses a bundled static feed in-repo. Signed-in Reddit sync is the next milestone.",
   });
 }

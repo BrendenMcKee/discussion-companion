@@ -3,8 +3,8 @@
 ## v0 (current)
 
 - Next.js app with landing page and live `/api/health` check from the client.
-- `JsonDatasetRedditProvider` plus `mocks/recent-posts.json` for offline-friendly data.
-- Opportunity ranking and draft feedback exposed as `/api/opportunities/sample` and `/api/feedback/sample`.
+- `JsonDatasetRedditProvider` plus `data/recent-posts.json` for a bundled static feed.
+- Opportunity ranking and draft feedback at `GET /api/opportunities` and `POST /api/feedback`.
 
 ## v1
 

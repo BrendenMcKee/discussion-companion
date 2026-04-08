@@ -18,7 +18,7 @@ flowchart LR
   end
 
   subgraph data [v0 data]
-    JSON[(mocks/*.json)]
+    JSON[(data/*.json)]
   end
 
   UI -->|fetch same origin| Routes
@@ -39,7 +39,7 @@ Another `RedditContentProvider` implementation can replace `JsonDatasetRedditPro
 | Domain logic | `src/lib/services/` | Ranking, draft feedback, Reddit-shaped reads. |
 | Types | `src/lib/types/` | Shared DTOs and response envelopes. |
 | Shared utilities | `src/lib/config/`, `src/lib/utils/`, `src/lib/constants/` | Env, logging, defaults. |
-| Bundled data | `mocks/` | JSON consumed by `JsonDatasetRedditProvider` in v0. |
+| Bundled data | `data/` | JSON seed feed for v0. |
 
 ## Runtime and deployment
 

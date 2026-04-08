@@ -14,7 +14,8 @@ export interface DraftFeedbackResult {
 }
 
 export interface DraftFeedbackResponse {
-  source: "sample";
+  /** `bundle` = heuristic engine on the server; distinct from future enhanced modes if any. */
+  source: "bundle";
   draftLength: number;
   feedback: DraftFeedbackResult;
 }

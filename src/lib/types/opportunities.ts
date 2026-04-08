@@ -8,8 +8,8 @@ export interface DiscussionOpportunity {
 }
 
 export interface OpportunitiesResponse {
-  /** `sample` means rows came from the bundled JSON dataset, not a live sync. */
-  source: "sample";
+  /** `bundle` means rows were built from the on-disk seed feed (v0); live sync will add other values later. */
+  source: "bundle";
   generatedAt: string;
   opportunities: DiscussionOpportunity[];
 }

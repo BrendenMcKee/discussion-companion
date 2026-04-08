@@ -6,7 +6,7 @@
     },
     {
       "label": "question_style",
-      "draft": "I'm stuck on promises in JavaScript — what pattern do you use to avoid nested .then() chains?"
+      "draft": "I'm stuck on promises in JavaScript. What pattern do you use to avoid nested .then() chains?"
     },
     {
       "label": "long_ramble",

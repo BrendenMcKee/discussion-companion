@@ -7,18 +7,18 @@ Reference for `src/lib/` and related app code.
 | File | Contents |
 | --- | --- |
 | `reddit.ts` | `RedditPostSummary`, `SubredditSnapshot` for the content provider and opportunities pipeline. |
-| `opportunities.ts` | `DiscussionOpportunity` and `OpportunitiesResponse` (`source: sample` in v0). |
-| `feedback.ts` | Request and response types for draft feedback (`source: sample` in v0). |
+| `opportunities.ts` | `DiscussionOpportunity` and `OpportunitiesResponse` (`source: bundle` in v0). |
+| `feedback.ts` | Request and response types for draft feedback (`source: bundle` in v0). |
 
 ## Reddit content (`src/lib/services/reddit/`)
 
 - **`RedditContentProvider.ts`** — `listRecentPosts({ subredditNames, limitPerSubreddit })` returns `RedditPostSummary[]`.
-- **`JsonDatasetRedditProvider.ts`** — Reads `mocks/recent-posts.json`, filters by subreddit, falls back to a slice of the full file when nothing matches.
+- **`JsonDatasetRedditProvider.ts`** — Reads `data/recent-posts.json`, filters by subreddit, falls back to a slice of the full file when nothing matches.
 - **`README.md`** — Short folder note.
 
 ## Opportunities (`src/lib/services/opportunities/`)
 
-- **`OpportunityService.ts`** — Uses a `RedditContentProvider`, scores each post with simple heuristics, sorts by score.
+- **`OpportunityService.ts`** — Uses a `RedditContentProvider`, scores each post with heuristics, sorts by score.
 
 ## Draft feedback (`src/lib/services/feedback/`)
 
@@ -32,16 +32,16 @@ Reference for `src/lib/` and related app code.
 
 ## Defaults (`src/lib/constants/defaults.ts`)
 
-- **`DEFAULT_SAMPLE_SUBREDDITS`** — Used when `GET /api/opportunities/sample` has no `subreddits` query.
+- **`DEFAULT_FEED_SUBREDDITS`** — Used when `GET /api/opportunities` has no `subreddits` query.
 
 ## UI (`src/components/`)
 
 - **`ApiStatus.tsx`** — Fetches `GET /api/health` and displays `service`, `environment`, `dataSource`, and `note`.
 
-## Data (`mocks/`)
+## Data (`data/`)
 
 | File | Role |
 | --- | --- |
-| `recent-posts.json` | Primary feed for `JsonDatasetRedditProvider`. |
-| `subreddit-snapshots.json` | Illustrative metadata for docs. |
+| `recent-posts.json` | Primary seed feed for `JsonDatasetRedditProvider`. |
+| `subreddit-snapshots.json` | Illustrative metadata for documentation. |
 | `draft-examples.json` | Example strings for manual API checks. |

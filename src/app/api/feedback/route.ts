@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   });
 
   const res: DraftFeedbackResponse = {
-    source: "sample",
+    source: "bundle",
     draftLength: req.draft.length,
     feedback,
   };

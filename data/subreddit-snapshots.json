@@ -1,5 +1,5 @@
 {
-  "description": "Illustrative snapshot metadata for documentation only. Not live Reddit data.",
+  "description": "Illustrative snapshot metadata for documentation. Static seed data, not a live pull.",
   "snapshots": [
     {
       "name": "test",

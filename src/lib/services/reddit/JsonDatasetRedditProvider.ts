@@ -11,14 +11,14 @@ interface PostsFile {
 }
 
 /**
- * Loads recent-post style rows from `mocks/recent-posts.json` for offline and CI runs.
- * Swap in another `RedditContentProvider` when the app syncs live Reddit data.
+ * Loads recent-post rows from `data/recent-posts.json` (bundled seed feed for v0).
+ * Replace with a live `RedditContentProvider` when Reddit sync is enabled.
  */
 export class JsonDatasetRedditProvider implements RedditContentProvider {
   async listRecentPosts(
     options: ListRecentPostsOptions,
   ): Promise<RedditPostSummary[]> {
-    const filePath = path.join(process.cwd(), "mocks", "recent-posts.json");
+    const filePath = path.join(process.cwd(), "data", "recent-posts.json");
     const raw = await readFile(filePath, "utf-8");
     const data = JSON.parse(raw) as PostsFile;
     const limit = options.limitPerSubreddit ?? 25;

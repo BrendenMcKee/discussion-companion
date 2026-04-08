@@ -12,9 +12,9 @@ Discussion Companion is a TypeScript app on **Next.js (App Router)**. **v0** shi
 
 ## v0 at a glance
 
-- Landing page plus **sample data pipeline** (`mocks/recent-posts.json` through `JsonDatasetRedditProvider`).
-- **Opportunity ranking** and **draft feedback** heuristics behind versioned HTTP routes (`/api/.../sample`).
-- **No** live Reddit requests in this build; sign-in and sync are the next engineering milestone.
+- Landing page plus a **bundled static feed** (`data/recent-posts.json` via `JsonDatasetRedditProvider`).
+- **Opportunity ranking** and **draft feedback** behind first-party HTTP routes (`/api/opportunities`, `/api/feedback`).
+- **No** live Reddit requests in this build yet; sign-in and sync are the next engineering milestone.
 
 ## Focus
 
@@ -55,20 +55,20 @@ Copy `.env.example` to `.env.local` when you configure OAuth or other secrets fo
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/api/health` | Service metadata, environment, `dataSource: bundled_sample`. |
-| `GET` | `/api/opportunities/sample` | Ranked opportunities from `mocks/recent-posts.json`. Optional `?subreddits=test,learnprogramming`. |
-| `POST` | `/api/feedback/sample` | JSON `{ "draft": "string", "context"?: string }`. Heuristic structured feedback (no hosted LLM). |
+| `GET` | `/api/health` | Service metadata, environment, `dataSource: bundled_feed`. |
+| `GET` | `/api/opportunities` | Ranked opportunities from `data/recent-posts.json`. Optional `?subreddits=test,learnprogramming`. |
+| `POST` | `/api/feedback` | JSON `{ "draft": "string", "context"?: string }`. Heuristic structured feedback (no hosted LLM in v0). |
 
 ## Repository layout
 
 - `src/app/` — App Router pages and API routes.
 - `src/lib/` — Types, config, logging, services (`OpportunityService`, `DraftFeedbackService`, `RedditContentProvider`).
-- `mocks/` — Bundled JSON feed and helper fixtures.
+- `data/` — Bundled JSON seed feed and related static files shipped with the app.
 - `docs/` — Overview, architecture, modules, HTTP reference, roadmap.
 
 ## Roadmap
 
-1. **v0 (now):** sample dataset, HTTP API, landing UI (this repo).
+1. **v0 (now):** bundled feed, HTTP API, landing UI (this repo).
 2. **v1:** sign-in and live `RedditContentProvider` for real reads.
 3. **v2:** richer relevance UX and draft workspace.
 4. **Hardening:** observability, rate limits, privacy documentation.
@@ -83,7 +83,7 @@ See [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
 - [`docs/OVERVIEW.md`](docs/OVERVIEW.md): Product summary and what ships in v0.
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): System diagram and layers.
-- [`docs/MODULES.md`](docs/MODULES.md): `src/lib` and fixture reference.
+- [`docs/MODULES.md`](docs/MODULES.md): `src/lib` and `data/` reference.
 - [`docs/HTTP_API.md`](docs/HTTP_API.md): Request and response shapes with examples.
 - [`docs/ROADMAP.md`](docs/ROADMAP.md): Near-term and later milestones.
 

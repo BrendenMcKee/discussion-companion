@@ -2,7 +2,7 @@
   "name": "discussion-companion",
   "version": "0.1.0",
   "private": true,
-  "description": "Discussion Companion: Reddit thread ideas and structured draft feedback. Next.js app with offline sample data in v0.",
+  "description": "Discussion Companion: Reddit thread ideas and structured draft feedback. Next.js app; v0 uses a bundled static feed until live sync ships.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

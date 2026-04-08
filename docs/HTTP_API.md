@@ -1,6 +1,6 @@
 # HTTP API
 
-v0 routes run on the same origin as the UI. Local base URL: `http://localhost:3000`.
+Routes are served by Next.js route handlers on the same origin as the UI. Local base URL: `http://localhost:3000`.
 
 ## `GET /api/health`
 
@@ -13,14 +13,14 @@ JSON metadata for the running instance.
   "ok": true,
   "service": "discussion-companion",
   "environment": "development",
-  "dataSource": "bundled_sample",
-  "note": "v0 build using bundled sample Reddit-shaped data. Live account sync is on the roadmap."
+  "dataSource": "bundled_feed",
+  "note": "v0 uses a bundled static feed in-repo. Signed-in Reddit sync is the next milestone."
 }
 ```
 
-## `GET /api/opportunities/sample`
+## `GET /api/opportunities`
 
-Returns ranked discussion opportunities built from `mocks/recent-posts.json`. Responses use `source: sample`.
+Returns ranked discussion opportunities from `data/recent-posts.json`. In v0 the JSON body includes `source: "bundle"` to mark the bundled seed feed.
 
 **Query parameters**
 
@@ -31,14 +31,14 @@ Returns ranked discussion opportunities built from `mocks/recent-posts.json`. Re
 **Example**
 
 ```http
-GET /api/opportunities/sample?subreddits=test,learnprogramming
+GET /api/opportunities?subreddits=test,learnprogramming
 ```
 
 **Response shape** (abbreviated)
 
 ```json
 {
-  "source": "sample",
+  "source": "bundle",
   "generatedAt": "2026-04-08T12:00:00.000Z",
   "opportunities": [
     {
@@ -53,9 +53,9 @@ GET /api/opportunities/sample?subreddits=test,learnprogramming
 }
 ```
 
-## `POST /api/feedback/sample`
+## `POST /api/feedback`
 
-Heuristic feedback on a draft. Responses use `source: sample`.
+Structured heuristic feedback on a draft. v0 responses use `source: "bundle"`.
 
 **Request body**
 
@@ -69,7 +69,7 @@ Heuristic feedback on a draft. Responses use `source: sample`.
 **Example**
 
 ```bash
-curl -s -X POST http://localhost:3000/api/feedback/sample \
+curl -s -X POST http://localhost:3000/api/feedback \
   -H "Content-Type: application/json" \
   -d "{\"draft\":\"Hello world\"}"
 ```
@@ -78,7 +78,7 @@ curl -s -X POST http://localhost:3000/api/feedback/sample \
 
 ```json
 {
-  "source": "sample",
+  "source": "bundle",
   "draftLength": 11,
   "feedback": {
     "clarity": "...",
