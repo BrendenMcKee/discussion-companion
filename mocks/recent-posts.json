@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": "dc-s1",
+      "subreddit": "test",
+      "title": "Weekly discussion: what are you testing this week?",
+      "permalink": "/r/test/comments/dc-s1/weekly_discussion/",
+      "createdUtc": "2026-04-01T14:22:00.000Z",
+      "selftextPreview": "Open thread for sandbox-style questions."
+    },
+    {
+      "id": "dc-s2",
+      "subreddit": "test",
+      "title": "How do I structure a thoughtful comment here?",
+      "permalink": "/r/test/comments/dc-s2/how_do_i_structure/",
+      "createdUtc": "2026-04-02T09:05:00.000Z"
+    },
+    {
+      "id": "dc-s3",
+      "subreddit": "learnprogramming",
+      "title": "Looking for advice on debugging async code",
+      "permalink": "/r/learnprogramming/comments/dc-s3/debugging_async/",
+      "createdUtc": "2026-04-03T11:40:00.000Z"
+    },
+    {
+      "id": "dc-s4",
+      "subreddit": "learnprogramming",
+      "title": "Resources for learning TypeScript in 2026?",
+      "permalink": "/r/learnprogramming/comments/dc-s4/typescript_resources/",
+      "createdUtc": "2026-04-04T08:15:00.000Z"
+    },
+    {
+      "id": "dc-s5",
+      "subreddit": "AskReddit",
+      "title": "What small habit changed your day the most?",
+      "permalink": "/r/AskReddit/comments/dc-s5/small_habit/",
+      "createdUtc": "2026-04-05T19:30:00.000Z"
+    }
+  ]
+}

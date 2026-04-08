@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "label": "short_comment",
+      "draft": "This."
+    },
+    {
+      "label": "question_style",
+      "draft": "I'm stuck on promises in JavaScript — what pattern do you use to avoid nested .then() chains?"
+    },
+    {
+      "label": "long_ramble",
+      "draft": "Obviously everyone knows that back in the day things were different and I have a lot to say about my experience with learning to code and the various tutorials I tried and the bootcamps and the documentation and honestly it's been a journey and I'm not sure where to start but I guess my question is whether TypeScript is worth it for someone who mostly writes small scripts."
+    }
+  ]
+}
