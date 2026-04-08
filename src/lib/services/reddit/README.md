@@ -12,4 +12,4 @@ Read-only boundary for recent public posts from subreddits the user cares about.
 - A provider backed by signed-in Reddit reads, same interface.
 - Pagination and caching tuned for production traffic.
 
-The JSON file adapter remains useful for fixtures and CI after live sync exists.
+The JSON file adapter remains useful for fixtures and CI after live read access exists.

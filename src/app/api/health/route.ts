@@ -9,6 +9,6 @@ export async function GET() {
     environment: env.nodeEnv,
     dataSource: "bundled_feed",
     note:
-      "v0 uses a bundled static feed in-repo. Signed-in Reddit sync is the next milestone.",
+      "v0 uses a bundled static feed in-repo. Authenticated Reddit read access is the next milestone.",
   });
 }

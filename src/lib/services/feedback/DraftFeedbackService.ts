@@ -30,7 +30,7 @@ export class DraftFeedbackService {
         : "Tone reads neutral; adjust to match community norms before posting.";
 
     const communityFit =
-      "Heuristic pass only. A future version can weigh subreddit rules and recent tone when synced data is available.";
+      "Heuristic pass only. A future version can weigh subreddit rules and recent tone when live read context is available.";
 
     const suggestedImprovements: string[] = [];
     if (!/\?/.test(text) && request.context !== "post") {

@@ -15,9 +15,10 @@ export default function HomePage() {
         Discussion Companion v0 runs as a Next.js web app with a bundled JSON
         feed shaped like Reddit posts, ranking and draft feedback on the server,
         and a small UI.{" "}
-        <strong>Live Reddit sync is not in this build.</strong> The next milestone
-        is a <code>RedditContentProvider</code> implementation that uses your
-        chosen sign-in and reads from Reddit for signed-in users.
+        <strong>Authenticated Reddit read access is not in this build.</strong>{" "}
+        The next milestone is a <code>RedditContentProvider</code> that calls
+        Reddit&apos;s Data API with a registered OAuth token, scoped to recent
+        public content from user-selected subreddits.
       </p>
 
       <h2>Server API from the browser</h2>
@@ -39,7 +40,7 @@ export default function HomePage() {
       <p className="muted">
         These are the first production-style routes. Responses include{" "}
         <code>source: &quot;bundle&quot;</code> when built from the on-disk seed
-        feed; that field will distinguish live sync later.
+        feed; that field will distinguish authenticated read responses later.
       </p>
       <ul>
         <li>

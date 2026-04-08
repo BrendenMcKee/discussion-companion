@@ -4,7 +4,7 @@ A web app for Reddit users who want calmer discovery and structured draft feedba
 
 ## Overview
 
-Discussion Companion is a TypeScript app on **Next.js (App Router)**. **v0** ships with bundled JSON that looks like Reddit posts so ranking, APIs, and UI work end to end without a network dependency. The same service layout will accept a live `RedditContentProvider` when you add account-based reads.
+Discussion Companion is a TypeScript app on **Next.js (App Router)**. **v0** ships with bundled JSON that looks like Reddit posts so ranking, APIs, and UI work end to end without a network dependency. The same service layout will accept a live `RedditContentProvider` when authenticated Reddit read access is added.
 
 ### Client and server in one dev command
 
@@ -14,7 +14,7 @@ Discussion Companion is a TypeScript app on **Next.js (App Router)**. **v0** shi
 
 - Landing page plus a **bundled static feed** (`data/recent-posts.json` via `JsonDatasetRedditProvider`).
 - **Opportunity ranking** and **draft feedback** behind first-party HTTP routes (`/api/opportunities`, `/api/feedback`).
-- **No** live Reddit requests in this build yet; sign-in and sync are the next engineering milestone.
+- **No** live Reddit requests in this build yet; authenticated read access is the next engineering milestone.
 
 ## Focus
 
@@ -69,7 +69,7 @@ Copy `.env.example` to `.env.local` when you configure OAuth or other secrets fo
 ## Roadmap
 
 1. **v0 (now):** bundled feed, HTTP API, landing UI (this repo).
-2. **v1:** sign-in and live `RedditContentProvider` for real reads.
+2. **v1:** OAuth-authenticated read access and a live `RedditContentProvider` for user-selected subreddits.
 3. **v2:** richer relevance UX and draft workspace.
 4. **Hardening:** observability, rate limits, privacy documentation.
 

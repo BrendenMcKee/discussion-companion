@@ -12,7 +12,7 @@ interface PostsFile {
 
 /**
  * Loads recent-post rows from `data/recent-posts.json` (bundled seed feed for v0).
- * Replace with a live `RedditContentProvider` when Reddit sync is enabled.
+ * Replace with a live `RedditContentProvider` when authenticated read access is enabled.
  */
 export class JsonDatasetRedditProvider implements RedditContentProvider {
   async listRecentPosts(

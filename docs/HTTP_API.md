@@ -14,7 +14,7 @@ JSON metadata for the running instance.
   "service": "discussion-companion",
   "environment": "development",
   "dataSource": "bundled_feed",
-  "note": "v0 uses a bundled static feed in-repo. Signed-in Reddit sync is the next milestone."
+  "note": "v0 uses a bundled static feed in-repo. Authenticated Reddit read access is the next milestone."
 }
 ```
 

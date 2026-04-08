@@ -8,7 +8,7 @@
 
 ## v1
 
-- User **sign-in** and a **live** `RedditContentProvider` (OAuth or your chosen model).
+- **OAuth-authenticated read access** and a **live** `RedditContentProvider` (per Reddit Data API requirements).
 - Read path scoped to subreddits the user selects.
 - Basic screens for opportunity lists and draft editing beyond the landing page.
 

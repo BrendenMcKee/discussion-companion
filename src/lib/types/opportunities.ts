@@ -8,7 +8,7 @@ export interface DiscussionOpportunity {
 }
 
 export interface OpportunitiesResponse {
-  /** `bundle` means rows were built from the on-disk seed feed (v0); live sync will add other values later. */
+  /** `bundle` means rows were built from the on-disk seed feed (v0); authenticated reads will use other values later. */
   source: "bundle";
   generatedAt: string;
   opportunities: DiscussionOpportunity[];
