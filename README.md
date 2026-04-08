@@ -1,6 +1,6 @@
 # Discussion Companion
 
-A web app for Reddit users who want calmer discovery and structured draft feedback: notice threads in **user-selected subreddits**, shape what you want to say, then participate on Reddit when you are ready.
+A web app for Reddit users who want calmer discovery and structured draft feedback: notice threads in **user-selected subreddits**, shape what you want to say, then decide whether to participate on Reddit manually.
 
 ## Overview
 
@@ -49,7 +49,7 @@ Open [http://localhost:3000](http://localhost:3000). Try [http://localhost:3000/
 | `npm run lint` | Runs ESLint. |
 | `npm run typecheck` | Runs TypeScript with no emit. |
 
-Copy `.env.example` to `.env.local` when you configure OAuth or other secrets for a live provider.
+Copy `.env.example` to `.env.local` when you are ready to configure authenticated Reddit read access.
 
 ## HTTP API (v0)
 
