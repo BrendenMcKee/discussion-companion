@@ -1,0 +1,94 @@
+/* Base styles for the app shell */
+
+:root {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --fg: #1a1d23;
+  --muted: #5c6575;
+  --card: #ffffff;
+  --border: #e2e5eb;
+  --accent: #1f6feb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+}
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+p {
+  margin: 0 0 0.85rem;
+}
+
+ul {
+  margin: 0 0 0.85rem;
+  padding-left: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-top: 1rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+code {
+  font-size: 0.9em;
+  background: #eef1f6;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
