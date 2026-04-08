@@ -1,6 +1,6 @@
 # Discussion Companion
 
-A web app for Reddit users who want calmer discovery and structured draft feedback: notice threads that fit your interests, shape what you want to say, then participate on Reddit when you are ready.
+A web app for Reddit users who want calmer discovery and structured draft feedback: notice threads in **user-selected subreddits**, shape what you want to say, then participate on Reddit when you are ready.
 
 ## Overview
 
@@ -18,7 +18,13 @@ Discussion Companion is a TypeScript app on **Next.js (App Router)**. **v0** shi
 
 ## Focus
 
-Subreddits the user cares about, ranked thread suggestions, and draft feedback before they post or comment on Reddit.
+**User-selected subreddits**, ranked thread suggestions, and draft feedback before someone posts or comments on Reddit.
+
+## What this app does not do
+
+Discussion Companion does not automate posting, commenting, voting, messaging, or bulk cross-posting on Reddit.
+
+It is intended as a read-oriented, human-in-the-loop companion that helps users read recent public threads from user-selected subreddits and improve drafts off platform before they decide what to do manually.
 
 ## Stack
 

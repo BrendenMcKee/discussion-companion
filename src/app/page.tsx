@@ -31,7 +31,7 @@ export default function HomePage() {
       <h2>Product direction</h2>
       <ul>
         <li>Highlight recent public threads from subreddits the user selects</li>
-        <li>Rank discussion opportunities the user might care about</li>
+        <li>Rank discussion opportunities from user-selected subreddits</li>
         <li>Iterate on drafts with structured feedback before posting on Reddit</li>
       </ul>
 
