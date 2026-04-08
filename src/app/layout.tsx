@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Discussion Companion",
   description:
-    "Early-stage web companion for Reddit: thread ideas and structured draft feedback.",
+    "Web companion for Reddit: surface thread ideas from subreddits you pick and refine drafts before you post.",
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@
 
 Discussion Companion is a browser app for people who use Reddit a lot. It surfaces discussion threads from **user-selected subreddits** and gives structured feedback while you draft, away from the default feed.
 
-**v0** is a full vertical slice: UI, HTTP API, ranking, and draft analysis running on a **bundled static feed** (`data/recent-posts.json`) that mirrors Reddit post shape. That keeps demos and local work deterministic. A later release swaps in authenticated Reddit read access behind the same provider interface.
+**v0** is a full vertical slice: UI, HTTP API, ranking, and draft analysis running on a **bundled static feed** (`data/recent-posts.json`) that mirrors Reddit post shape. That keeps local development and tests deterministic without calling Reddit. A later release swaps in authenticated Reddit read access behind the same provider interface.
 
 ## What ships in v0
 

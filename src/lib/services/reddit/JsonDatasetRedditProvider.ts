@@ -31,7 +31,7 @@ export class JsonDatasetRedditProvider implements RedditContentProvider {
     );
 
     if (filtered.length === 0) {
-      logger.debug("json dataset: no posts for requested subreddits, using full sample set", {
+      logger.debug("json dataset: no posts for requested subreddits, using full bundled feed slice", {
         requested: [...wanted],
       });
       return data.posts.slice(0, limit);

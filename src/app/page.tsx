@@ -38,7 +38,7 @@ export default function HomePage() {
 
       <h2>HTTP API (v0)</h2>
       <p className="muted">
-        These are the first production-style routes. Responses include{" "}
+        These routes back the v0 product surface. Responses include{" "}
         <code>source: &quot;bundle&quot;</code> when built from the on-disk seed
         feed; that field will distinguish authenticated read responses later.
       </p>

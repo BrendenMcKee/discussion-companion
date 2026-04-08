@@ -5,7 +5,7 @@ Read-only boundary for recent public posts from subreddits the user cares about.
 ## What ships today
 
 - **`RedditContentProvider`** defines `listRecentPosts` for the opportunity pipeline.
-- **`JsonDatasetRedditProvider`** reads `data/recent-posts.json` so the app runs without calling Reddit (local dev, tests, demos).
+- **`JsonDatasetRedditProvider`** reads `data/recent-posts.json` so the app runs without calling Reddit (local development, tests, and offline use).
 
 ## What comes next
 
